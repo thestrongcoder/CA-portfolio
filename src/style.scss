@@ -34,14 +34,15 @@ $secondary-font-family: 'Bebas Neue', cursive;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  background-color: pink;
+  background-color: rgb(0, 0, 0);
   font-family: $primary-font-family;
   font-size: 1em;
+  color: pink;
 }
 
 html, body {
   font-family: Open Sans;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 15px;
   scroll-behavior: smooth;
 }
@@ -77,63 +78,265 @@ p {
   position: relative;
   z-index: -1;
   height: 100vh;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   transform: translateZ(-1px) scale(2);
-  background-color: grey;
+  background-color: pink;
 
   letter-spacing: -15px;
   font-family: Open Sans;
-  color: white;
+  color: black;
   text-align: center;
-  font-size: 120px;
+  font-size: 100px;
   font-weight: 800;
   line-height: 200px;
-}
 
-
-/* The hero image */
-.hero-image {
-/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
-
-/* Set a specific height */
-height: 50%;
-
-/* Position and center the image to scale nicely on all screens */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
 }
 
 #spin {
-  color:black;
+  color: black;
   font-family: $primary-font-family;
 }
 #spin:after {
   content:"";
-  animation: spin 5s linear infinite;
+  animation: spin 8s linear infinite;
 }
 @keyframes spin {
-  0% { content:"a developer";}
-  10% { content:"a GPC powerlifter";}
-  20% { content:"a creator";}
-  30% { content:"female";}
-  40% { content:"independent";}
-  50% { content: "strong";}
-  60% { content: "a dog lover";}
-  70% { content: "friend";}
-  80% { content: "creative";}
-  90% { content: "a coder academy graduate of 2020";}
+  0% { content:"Developer";}
+  10% { content:"GPC powerlifter";}
+  20% { content:"Creator";}
+  30% { content:"Female";}
+  40% { content:"Independent";}
+  50% { content: "Strong";}
+  60% { content: "Dog lover";}
+  70% { content: "Student";}
+  80% { content: "Creative";}
+  90% { content: "The Strong Coder";}
 }
+  
+
+h1 {
+  font-size:50px;
+  color: black;
+  padding-top:10px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body { color:black }
+
+.f-input::placeholder {
+  color:black;
+  opacity:0.9;
+}
+
+.f-input {
+  background-color: transparent;
+  border:2px solid black;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 4px;
+  line-height: 22px;
+  text-align:left;
+}
+
+.f-input:focus { 
+  border:2px solid #3a3939; }
+
+textarea {
+  height: 250px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+button {
+  max-width:450px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: black;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  transition: all 0.3s;
+  font-weight:600; 
+}
+button:hover {
+ background:#442020;
+}
+
+// Barbell animation on About, Blog, and Contact Page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes lLoading {
+  0% {
+    transform: translate(-500%, -50%);
+  }
+  25%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes rLoading {
+  0% {
+    transform: translate(500%, -50%);
+  }
+  25%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes lBeforeLoading {
+  0%, 25% {
+    transform: translate(-500%, -50%);
+  }
+  50%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes lAfterLoading {
+  0%, 50% {
+    transform: translate(-500%, -50%);
+  }
+  75%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes rBeforeLoading {
+  0%, 25% {
+    transform: translate(500%, -50%);
+  }
+  50%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes rAfterLoading {
+  0%, 50% {
+    transform: translate(500%, -50%);
+  }
+  75%, 100% {
+    transform: translate(0%, -50%);
+  }
+}
+
+.barbell-animation {
+  position: absolute;
+  top: 60%;
+
+.barbell {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 200px;
+  overflow: hidden;
+  
+  .plates {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 50%;
+    background: black;
+    border-radius: 2px;
+    
+    &.lPlates {
+      left: 50px;
+      right: 50px;
+      animation: lLoading 2s infinite;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -5px;
+        width: 10px;
+        height: 75%;
+        background: black;
+        animation: lBeforeLoading 2s infinite;
+        border-radius: 0px;
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10px;
+        width: 10px;
+        height: 50%;
+        background: black;
+        animation: lAfterLoading 2s infinite;
+        border-radius: 0px;
+      }
+    }
+    
+    &.rPlates {
+      right: 50px;
+      left: auto;
+      animation: rLoading 2s infinite;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -5px;
+        width: 10px;
+        height: 75%;
+        background: black;
+        animation: rBeforeLoading 2s infinite;
+        border-radius: 0px;
+      }
+      
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px;
+        width: 10px;
+        height: 50%;
+        background: black;
+        animation: rAfterLoading 2s infinite;
+        border-radius: 0px;
+      }
+    }
+  }
+  
+  .bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 8px;
+    background: black;
+  }
+}
+}
+@media screen and (max-width: 599px) {
+  .ParallaxContainer {
+    font-size: 80px;
+  }
+}
+// @media screen and (min-width: 600px)
