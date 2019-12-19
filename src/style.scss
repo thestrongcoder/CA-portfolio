@@ -44,7 +44,7 @@ body {
 
 header {
   background: var(--background);
-  background-color: pink;
+  background-color: rgb(100, 62, 69);
   text-align: center;
   position: fixed;
   z-index: 1;
@@ -473,7 +473,7 @@ p {
   justify-content: center; 
   align-items: center;
   transform: translateZ(-1px) scale(2);
-  background-color: pink;
+  background-color: rgb(100, 62, 69);
 
   letter-spacing: -15px;
   font-family: Open Sans;

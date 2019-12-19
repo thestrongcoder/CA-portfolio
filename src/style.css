@@ -38,7 +38,7 @@ body {
 /* navigation styles start here */
 header {
   background: var(--background);
-  background-color: pink;
+  background-color: #643e45;
   text-align: center;
   position: fixed;
   z-index: 1;
@@ -560,7 +560,7 @@ p {
           align-items: center;
   -webkit-transform: translateZ(-1px) scale(2);
           transform: translateZ(-1px) scale(2);
-  background-color: pink;
+  background-color: #643e45;
   letter-spacing: -15px;
   font-family: Open Sans;
   color: black;
