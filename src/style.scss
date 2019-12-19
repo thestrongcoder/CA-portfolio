@@ -26,7 +26,7 @@ $secondary-font-family: 'Bebas Neue', cursive;
 body {
 	margin: 0;
 	background: #222;
-	font-family: 'Work Sans', sans-serif;
+	font-family: $primary-font-family;
 	font-weight: 400;
 }
 
